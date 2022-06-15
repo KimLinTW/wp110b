@@ -1,0 +1,52 @@
+let txt="Name:Kim, Age:20, Job:student, Email:s111010558@student.nqu.edu.tw abc@abcd"
+undefined
+let re1 = /[0-9]+/g;
+undefined
+console.log(txt.match(re1));
+VM126:1 (2) ['20', '111010558']
+undefined
+let re2 = /[a-z]+/g;
+undefined
+console.log(txt.match(re2));
+VM134:1 (13) ['ame', 'im', 'ge', 'ob', 'student', 'mail', 's', 'student', 'nqu', 'edu', 'tw', 'abc', 'abcd']
+undefined
+let re3 = /:([0-9a-zA-Z])+/g;
+undefined
+console.log(txt.match(re3));
+VM168:1 (4) [':Kim', ':20', ':student', ':s111010558']
+undefined
+let re4 = /:([0-9a-zA-Z])+/;
+undefined
+console.log(txt.match(re4));
+VM214:1 (2) [':Kim', 'm', index: 4, input: 'Name:Kim, Age:20, Job:student, Email:s111010558@student.nqu.edu.tw abc@abcd', groups: undefined]
+undefined
+let re5 = /:([0-9a-zA-Z]+)/;
+undefined
+console.log(txt.match(re5));
+VM250:1 (2) [':Kim', 'Kim', index: 4, input: 'Name:Kim, Age:20, Job:student, Email:s111010558@student.nqu.edu.tw abc@abcd', groups: undefined]
+undefined
+let re6 = /:\w+/;
+undefined
+console.log(txt.match(re6));
+VM281:1 [':Kim', index: 4, input: 'Name:Kim, Age:20, Job:student, Email:s111010558@student.nqu.edu.tw abc@abcd', groups: undefined]
+undefined
+let re7 = /:\d+/g;
+undefined
+console.log(txt.match(re7));
+VM312:1 [':20']
+undefined
+let re8 = /:\D+/g;
+undefined
+console.log(txt.match(re8));
+VM343:1 (2) [':Kim, Age:', ':student, Email:s']
+undefined
+let re9 = /\w+@[\w\.]+/g;
+undefined
+console.log(txt.match(re9));
+VM374:1 (2) ['s111010558@student.nqu.edu.tw', 'abc@abcd']
+undefined
+let re10= /\w+@\w+\.[\w\.]+/g
+undefined
+console.log(txt.match(re10));
+VM426:1 ['s111010558@student.nqu.edu.tw']
+undefined
